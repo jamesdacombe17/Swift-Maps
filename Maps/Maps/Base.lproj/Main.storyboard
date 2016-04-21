@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Fh6-uY-Hwg">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Current Location-->
+        <scene sceneID="jfK-TC-ScL">
+            <objects>
+                <viewController id="ool-DS-ZOi" customClass="ViewController" customModule="MKMapView_Xcode_7" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uYJ-LT-i1V"/>
+                        <viewControllerLayoutGuide type="bottom" id="H84-4c-glg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="T7T-No-zfE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="KaE-Vz-8Oz">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KaE-Vz-8Oz" firstAttribute="top" secondItem="T7T-No-zfE" secondAttribute="top" id="bRZ-vg-Cjg"/>
+                            <constraint firstAttribute="trailing" secondItem="KaE-Vz-8Oz" secondAttribute="trailing" id="c6R-Qe-TGI"/>
+                            <constraint firstItem="KaE-Vz-8Oz" firstAttribute="leading" secondItem="T7T-No-zfE" secondAttribute="leading" id="nlM-rT-nce"/>
+                            <constraint firstItem="KaE-Vz-8Oz" firstAttribute="bottom" secondItem="H84-4c-glg" secondAttribute="top" id="s1o-eS-1mX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Current Location" id="TRR-8N-V8W"/>
+                    <connections>
+                        <outlet property="mapView" destination="KaE-Vz-8Oz" id="Eah-Es-F71"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="18h-Lv-URI" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1057" y="319"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Hf3-B5-HQe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fh6-uY-Hwg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bih-pt-TvW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ool-DS-ZOi" kind="relationship" relationship="rootViewController" id="4Dd-bS-glz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="agy-SC-Ez2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="257" y="979"/>
+        </scene>
+    </scenes>
+</document>
